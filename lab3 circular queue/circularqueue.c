@@ -73,9 +73,10 @@ void display()
     else
     {
         printf("Queue elements are: \n");
-        for(i=(front+1)%MAX;i<=rear;i=(i+1)%MAX)
+        for(i=(front+1)%MAX;i!=rear;i=(i+1)%MAX)
         {
             printf("%d\n",data[i]);
         }
+        printf("%d\n",data[rear]);
     }
 }
